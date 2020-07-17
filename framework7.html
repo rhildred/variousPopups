@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>My App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+</head>
+
+<body>
+    <div class="page-content view-main">
+        <div class="content-block">
+            <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
+            <p><a href="#" data-popup=".popup-about" class="open-popup">Open About Popup </a></p>
+            <p><a href="#" data-popup=".popup-services" class="open-popup">Open Services Popup </a></p>
+        </div>
+    </div>
+    <!-- About Popup -->
+    <div class="popup popup-about">
+        <div class="content-block">
+            <p>About</p>
+            <p><a href="#" class="close-popup">Close popup</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <!-- Services Popup -->
+    <div class="popup popup-services">
+        <div class="content-block">
+            <p>Services</p>
+            <p><a href="#" class="close-popup">Close popup</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+
+    <script>
+        // here initialize the app
+        var myApp = new Framework7();
+
+        // If your using custom DOM library, then save it to $$ variable
+        var $$ = Dom7;
+
+        // Add the view
+        var mainView = myApp.addView('.view-main', {
+
+            // enable the dynamic navbar for this view:
+            dynamicNavbar: true
+        });
+    </script>
+
+</body>
