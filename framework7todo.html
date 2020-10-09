@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>My App</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.12/css/framework7.bundle.min.css" />
+</head>
+
+<body>
+    <div class="page-content view-main">
+        <form class="list" id="my-form">
+            <ul>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Name</div>
+                            <div class="item-input-wrap">
+                                <input id="name" type="text" name="name" placeholder="Name of Todo">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Description</div>
+                            <div class="item-input-wrap">
+                                <textarea id="description" name="description" placeholder="Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Due Date</div>
+                            <div class="item-input-wrap">
+                                <input id="due" type="date" name="due" placeholder="enter due date" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <a id="addTodo" class="button convert-form-to-data" href="#">Get Data</a>
+        </form>
+        <div id="todos"></div>
+    </div>
+    <!-- script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.12/js/framework7.bundle.min.js"></script -->
+
+    <script src="/js/main.js" type="module"></script>
+
+</body>
