@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>My App</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.12/css/framework7.bundle.min.css" />
+</head>
+
+<body>
+    <div class="page-content view-main">
+        <form class="list" id="my-form">
+            <ul>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Name</div>
+                            <div class="item-input-wrap">
+                                <input type="text" name="name" placeholder="Your name">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">E-mail</div>
+                            <div class="item-input-wrap">
+                                <input type="email" name="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-title item-label">Gender</div>
+                            <div class="item-input-wrap">
+                                <select name="gender">
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Toggle</div>
+                            <div class="item-after">
+                                <label class="toggle toggle-init">
+                                    <input type="checkbox" name="toggle" value="yes"><i class="toggle-icon"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <div class="block block-strong row">
+            <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
+            <div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div>
+        </div>
+    </div>
+    <!-- About Popup -->
+    <div class="popup popup-about">
+        <div class="content-block">
+            <p>About</p>
+            <p><a href="#" class="close-popup">Close popup</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <!-- Services Popup -->
+    <div class="popup popup-services">
+        <div class="content-block">
+            <p>Services</p>
+            <p><a href="#" class="close-popup">Close popup</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.12/js/framework7.bundle.min.js"></script>
+
+    <script>
+        // here initialize the app
+        var myApp = new Framework7();
+
+        // If your using custom DOM library, then save it to $$ variable
+        var $$ = Dom7;
+
+        // Add the view
+        var mainView = myApp.addView('.view-main', {
+
+            // enable the dynamic navbar for this view:
+            dynamicNavbar: true
+        });
+    </script>
+
+</body>
